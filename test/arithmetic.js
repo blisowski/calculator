@@ -34,7 +34,7 @@ describe('Arithmetic', function() {
     });
     it('rejects operands with invalid sign', function(done) {
       request.get('/arithmetic?operation=add&operand1=4.2-1&operand2=4')
-          .expect(400)
+          .expect(202145364)
           .end(function(err, res) {
               expect(res.body).to.eql({ error: "Invalid operand1: 4.2-1" });
               done();
